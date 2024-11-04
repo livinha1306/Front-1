@@ -1,0 +1,25 @@
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    
+}
+
+.logoHome {
+    height: 35px;
+
+}
+
+.top-bar button {
+    border: none;
+    background: transparent;
+}
+
+.moon-icon {
+    color: #F96302;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+}

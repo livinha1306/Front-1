@@ -1,0 +1,8 @@
+.message-input {
+    width: 500px;
+    resize: none;
+    overflow: hidden;
+    min-height: 50%;
+    overflow-y: auto;
+  
+}
