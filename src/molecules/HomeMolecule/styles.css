@@ -1,47 +1,46 @@
 .content {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     margin-bottom: 60px;
+    align-items: center;
+    gap: 20px;
 }
 
-.imagem {
-    margin-bottom: 12%;
+.mascot-description-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: -20px; /* Move o mascote e a descrição um pouco para cima */
 }
 
 .descrição {
-    background-color: #fafafa;
-    border-radius: 70px;
+    background-color: #FFD1AD;
+    border-radius: 10px;
     padding: 20px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    align-self: center;
+    margin-top: -40px; /* Move apenas a descrição para cima */
 }
 
-
-.description {
-    font-size: 16px;
-    color: #333;
-    margin-left: 20px;
-    margin-top: 0; 
+.descrição::before {
+    content: "";
+    position: absolute;
+    left: -25px; /* Ajusta a posição da boca */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent; /* Aumenta a altura da boca */
+    border-bottom: 15px solid transparent; /* Aumenta a altura da boca */
+    border-right: 25px solid #FFD1AD; /* Aumenta a largura da boca */
 }
-
 
 .mascot-image {
-        width: auto;      /* Permite que a largura da imagem seja ajustada automaticamente */
-        height: auto;     /* Permite que a altura da imagem seja ajustada automaticamente */
-        max-width: 150px; /* Define uma largura máxima para a imagem */
-        max-height: 250px; /* Define uma altura máxima para a imagem */
-        margin-top: -10px;
-    
-}
-
-.history-icon {
-    position: fixed;
-    font-size: 30px;
-    color: #F96302 !important;
-    cursor: pointer;
+    max-width: 250px;
+    max-height: 450px;
+    margin-top: -10px;
 }

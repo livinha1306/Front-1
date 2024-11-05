@@ -2,16 +2,16 @@
   z-index: 1000;
   display: flex;
   justify-content: center;
-  padding: 5px;
   background-color: var(--input);
   border: 1px solid rgba(0, 0, 0, .1);
   border-radius: 10px;
   max-width: 100%; /* Define a largura máxima da mensagem */
   word-wrap: break-word; /* Quebra automaticamente as palavras longas */
   white-space: pre-wrap;
+  align-items: center;
+  margin-bottom: 100px; /* Ajuste esse valor para subir o contêiner */
 }
 
-/* Adiciona essas propriedades no elemento que exibe a mensagem de texto */
 .message-text {
   max-width: 100%;
   word-wrap: break-word;
@@ -22,6 +22,7 @@
 .message-input {
   flex-grow: 1;
   padding: 5px;
+  padding-top: 15px;
   margin: 0 10px;
   color: white;
   background-color: var(--input);
@@ -33,7 +34,7 @@
 }
 
 .message-input::placeholder {
-  color: rgb(24, 11, 11);
+  color: white;
 }
 
 .botaoIcone {

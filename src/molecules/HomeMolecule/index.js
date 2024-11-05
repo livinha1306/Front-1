@@ -1,12 +1,10 @@
-
-
 import React, { useCallback, useEffect, useState } from 'react';
 import './styles.css';
 import { Container, Row, Col, Image, Button } from 'react-bootstrap';
-import Copelo from '../../img/Copelo.jpg.png';
+import Copelo from '../../img/Copelo.png';
 import { ChatWindow } from '../ChatWindow';
 import { MessageInput } from '../MessageInput';
-import { FiAlignJustify } from "react-icons/fi";
+import { IoMenu } from "react-icons/io5";
 
 export const HomeMolecule = ({ setShowHistory, showHistory }) => {
 
@@ -46,31 +44,34 @@ export const HomeMolecule = ({ setShowHistory, showHistory }) => {
     <div className="home-container">
       <Row className="content align-items-center">
         {!messages.length && (
-        <>
-          <Col xs={12} md={6} className="d-flex justify-content-center">
-            <Image src={Copelo} alt="Mascote Copel" className="mascot-image" fluid />
-          </Col>
-          <Col xs={12} md={6} className="mt-3 descrição">
-            <p className="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus massa in ullamcorper dignissim. Etiam.
-            </p>
-          </Col>
-        </>
+          <div className="mascot-description-container d-flex">
+            <Col xs={6} className="d-flex justify-content-center">
+              <Image src={Copelo} alt="Mascote Copel" className="mascot-image" fluid />
+            </Col>
+            <Col xs={6} className="descrição">
+              <p className="description">
+              Olá <strong>Lívia</strong>, eu sou o Copelo,<br />
+              <strong>seu assistente virtual!</strong><br />
+              Estou aqui para te ajudar.<br />
+              <strong>Faça sua pergunta...</strong>
+              </p>
+            </Col>
+          </div>
         )}
-        <Col xs={12} >
+        <Col xs={12}>
           <ChatWindow messages={messages} handleRatings={handleRatings} />
         </Col>
       </Row>
       <Row>
-        <Col xs={12} className=''>
+        <Col xs={12}>
           <MessageInput inputValue={inputValue} setInputValue={setInputValue} handleSendMessage={handleSendMessage} />
         </Col>
         <Col xs={12} className="text-center mt-2">
-          <Button  variant='link' className="history-icon" onClick={() => setShowHistory(!showHistory)}>
-            <FiAlignJustify className="history-icon"/>
+          <Button variant="link" className="history-icon" onClick={() => setShowHistory(!showHistory)}>
+            <IoMenu className="history-icon" />
           </Button>
         </Col>
       </Row>
     </div>
   );
-}
+};

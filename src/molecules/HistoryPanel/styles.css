@@ -5,11 +5,11 @@
   display: flex;
   flex-direction: column;
   width: 20% !important;
-  height: calc(100vh - 60px); 
+  height: calc(100vh - 60px);
   padding: 10px;
   background-color: var(--background);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
-  overflow-y: auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .history-item {
@@ -18,7 +18,6 @@
   padding: 10px;
   margin-bottom: 10px;
   text-overflow: ellipsis;
-  background-color: #f96302 !important;
   border-radius: 5px;
 }
 
@@ -34,26 +33,17 @@
   background: none !important;
 }
 
-.botaoIcone2:hover {
-  background-color: #e1ffc76b;
+.icon-button {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0; /* Remove espaçamento adicional */
+  box-shadow: none; /* Remove sombra */
 }
 
-.history-panel.hide {
-  transform: translateX(-100%);
-  transition: transform .3s ease-in-out;
-}
 
-.history-panel.show {
-  transform: translateX(0);
-  transition: transform .3s ease-in-out;
-}
 
-.history-item {
-  padding: 10px;
-  margin: 5px 0;
-}
-
-.botaoIcone2 i {
+.small-icon {
+  color: black;
   font-size: 1rem;
 }
 
@@ -64,17 +54,12 @@
   height: 70px;
 }
 
-.icon-button {
-  align-self: self-end;
-  background-color: transparent !important;
-  border: transparent !important;
+.history-panel.hide {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
-.icon-button:hover {
-  color: #0056b3;
-}
-
-.small-icon {
-  color: black;
-  font-size: 1rem;
+.history-panel.show {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
 }
